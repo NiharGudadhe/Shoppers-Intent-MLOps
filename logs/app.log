@@ -1,0 +1,322 @@
+2026-08-09 09:33:15 — __main__ — INFO — MySQL engine created successfully
+2026-08-09 09:33:16 — __main__ — INFO — Extracted 12330 rows from MySQL
+2026-08-09 09:34:13 — extract — INFO — MySQL engine created successfully
+2026-08-09 09:34:13 — extract — INFO — Extracted 12330 rows from MySQL
+2026-08-09 09:34:13 — __main__ — INFO — Starting data transformation
+2026-08-09 09:34:13 — __main__ — INFO — Column validation passed
+2026-08-09 09:34:13 — __main__ — INFO — Null value validation passed
+2026-08-09 09:34:13 — __main__ — INFO — Value range validation passed
+2026-08-09 09:34:13 — __main__ — ERROR — Data validation failed: Revenue column contains invalid values — expected 0 or 1
+2026-08-09 09:34:13 — __main__ — ERROR — Data transformation failed: Revenue column contains invalid values — expected 0 or 1
+2026-08-09 09:43:06 — extract — INFO — MySQL engine created successfully
+2026-08-09 09:43:07 — extract — INFO — Extracted 12330 rows from MySQL
+2026-08-09 09:43:07 — __main__ — INFO — Starting data transformation
+2026-08-09 09:43:07 — __main__ — ERROR — Data transformation failed: invalid literal for int() with base 10: 'FALSE'
+2026-08-09 09:54:25 — __main__ — INFO — MySQL engine created successfully
+2026-08-09 09:54:25 — __main__ — INFO — CSV loaded — 12330 rows
+2026-08-09 09:54:25 — __main__ — INFO — Weekend and Revenue columns converted successfully
+2026-08-09 09:54:27 — __main__ — INFO — Loaded 12330 rows into MySQL
+2026-08-09 09:54:27 — __main__ — INFO — Revenue distribution:
+Revenue
+0    10422
+1     1908
+Name: count, dtype: int64
+2026-08-09 09:55:45 — __main__ — INFO — MySQL engine created successfully
+2026-08-09 09:55:46 — __main__ — INFO — Extracted 12330 rows from MySQL
+2026-08-09 09:56:03 — extract — INFO — MySQL engine created successfully
+2026-08-09 09:56:03 — extract — INFO — Extracted 12330 rows from MySQL
+2026-08-09 09:56:03 — __main__ — INFO — Starting data transformation
+2026-08-09 09:56:03 — __main__ — INFO — Column validation passed
+2026-08-09 09:56:03 — __main__ — INFO — Null value validation passed
+2026-08-09 09:56:03 — __main__ — INFO — Value range validation passed
+2026-08-09 09:56:03 — __main__ — INFO — Revenue column validation passed
+2026-08-09 09:56:03 — __main__ — INFO — Row count validation passed — 12330 rows
+2026-08-09 09:56:03 — __main__ — INFO — Dropped 125 duplicate rows
+2026-08-09 09:56:03 — __main__ — INFO — Dropped 0 null rows
+2026-08-09 09:56:03 — __main__ — INFO — Month column encoded
+2026-08-09 09:56:03 — __main__ — INFO — VisitorType column encoded
+2026-08-09 09:56:03 — __main__ — INFO — Transformation complete — final shape: (12205, 18)
+2026-08-09 09:57:13 — extract — INFO — MySQL engine created successfully
+2026-08-09 09:57:13 — extract — INFO — Extracted 12330 rows from MySQL
+2026-08-09 09:57:13 — transform — INFO — Starting data transformation
+2026-08-09 09:57:13 — transform — INFO — Column validation passed
+2026-08-09 09:57:13 — transform — INFO — Null value validation passed
+2026-08-09 09:57:13 — transform — INFO — Value range validation passed
+2026-08-09 09:57:13 — transform — INFO — Revenue column validation passed
+2026-08-09 09:57:13 — transform — INFO — Row count validation passed — 12330 rows
+2026-08-09 09:57:13 — transform — INFO — Dropped 125 duplicate rows
+2026-08-09 09:57:13 — transform — INFO — Dropped 0 null rows
+2026-08-09 09:57:13 — transform — INFO — Month column encoded
+2026-08-09 09:57:13 — transform — INFO — VisitorType column encoded
+2026-08-09 09:57:13 — transform — INFO — Transformation complete — final shape: (12205, 18)
+2026-08-09 09:57:14 — __main__ — INFO — PostgreSQL engine created successfully
+2026-08-09 09:57:16 — __main__ — INFO — Loaded 12205 rows into PostgreSQL warehouse
+2026-08-09 12:03:09 — __main__ — INFO — PostgreSQL engine created successfully
+2026-08-09 12:03:09 — __main__ — INFO — Loaded 12205 rows from PostgreSQL warehouse
+2026-08-09 12:03:09 — __main__ — INFO — Starting preprocessing
+2026-08-09 12:03:09 — __main__ — INFO — Before SMOTE — Revenue 0: 10297, Revenue 1: 1908
+2026-08-09 12:03:09 — __main__ — INFO — Feature scaling complete
+2026-08-09 12:03:09 — __main__ — INFO — Selected Features: ['Administrative', 'Administrative_Duration', 'Informational', 'ProductRelated', 'ProductRelated_Duration', 'BounceRates', 'ExitRates', 'PageValues', 'SpecialDay', 'VisitorType']
+2026-08-09 12:03:09 — __main__ — INFO — After SMOTE — Revenue 0: 10297, Revenue 1: 10297
+2026-08-09 12:03:09 — __main__ — INFO — Scaler saved to ./ml/scaler.pkl
+2026-08-09 12:03:09 — __main__ — INFO — Selector saved to ./ml/selector.pkl
+2026-08-09 12:03:09 — __main__ — INFO — Selected features saved to ./ml/selected_features.pkl
+2026-08-09 12:03:09 — __main__ — INFO — Preprocessing complete — final shape: (20594, 10)
+2026-08-09 12:04:30 — __main__ — INFO — Training pipeline started
+2026-08-09 12:04:30 — preprocess — INFO — PostgreSQL engine created successfully
+2026-08-09 12:04:30 — preprocess — INFO — Loaded 12205 rows from PostgreSQL warehouse
+2026-08-09 12:04:30 — preprocess — INFO — Starting preprocessing
+2026-08-09 12:04:30 — preprocess — INFO — Before SMOTE — Revenue 0: 10297, Revenue 1: 1908
+2026-08-09 12:04:30 — preprocess — INFO — Feature scaling complete
+2026-08-09 12:04:30 — preprocess — INFO — Selected Features: ['Administrative', 'Administrative_Duration', 'Informational', 'ProductRelated', 'ProductRelated_Duration', 'BounceRates', 'ExitRates', 'PageValues', 'SpecialDay', 'VisitorType']
+2026-08-09 12:04:30 — preprocess — INFO — After SMOTE — Revenue 0: 10297, Revenue 1: 10297
+2026-08-09 12:04:30 — preprocess — INFO — Scaler saved to ./ml/scaler.pkl
+2026-08-09 12:04:30 — preprocess — INFO — Selector saved to ./ml/selector.pkl
+2026-08-09 12:04:30 — preprocess — INFO — Selected features saved to ./ml/selected_features.pkl
+2026-08-09 12:04:30 — preprocess — INFO — Preprocessing complete — final shape: (20594, 10)
+2026-08-09 12:04:30 — __main__ — INFO — Train size: 16475 | Test size: 4119
+2026-08-09 12:04:30 — __main__ — INFO — Starting hyperparameter tuning for RandomForest
+2026-08-09 12:06:06 — __main__ — INFO — RandomForest best params: {'max_depth': None, 'min_samples_split': 2, 'n_estimators': 200}
+2026-08-09 12:06:06 — __main__ — INFO — RandomForest best cv score: 0.9680
+2026-08-09 12:06:07 — __main__ — INFO — RandomForest — Accuracy: 0.9175 | AUC: 0.9740
+2026-08-09 12:06:07 — __main__ — INFO — Starting hyperparameter tuning for XGBoost
+2026-08-09 12:06:14 — __main__ — INFO — XGBoost best params: {'learning_rate': 0.1, 'max_depth': 6, 'n_estimators': 200}
+2026-08-09 12:06:14 — __main__ — INFO — XGBoost best cv score: 0.9674
+2026-08-09 12:06:14 — __main__ — INFO — XGBoost — Accuracy: 0.9116 | AUC: 0.9710
+2026-08-09 12:06:14 — __main__ — INFO — Starting hyperparameter tuning for LightGBM
+2026-08-09 12:06:25 — __main__ — INFO — LightGBM best params: {'learning_rate': 0.1, 'max_depth': -1, 'n_estimators': 200}
+2026-08-09 12:06:25 — __main__ — INFO — LightGBM best cv score: 0.9736
+2026-08-09 12:06:25 — __main__ — INFO — LightGBM — Accuracy: 0.9223 | AUC: 0.9778
+2026-08-09 12:06:25 — __main__ — INFO — Best Model: LightGBM — AUC: 0.9778
+2026-08-09 12:06:25 — mlflow_tracker — INFO — MLflow initialized
+2026-08-09 12:06:45 — mlflow_tracker — INFO — MLflow run logged for RandomForest — Best: False
+2026-08-09 12:06:55 — mlflow_tracker — INFO — MLflow run logged for XGBoost — Best: False
+2026-08-09 12:07:03 — mlflow_tracker — INFO — Best model 'LightGBM' registered in MLflow Model Registry
+2026-08-09 12:07:03 — mlflow_tracker — INFO — MLflow run logged for LightGBM — Best: True
+2026-08-09 12:07:03 — mlflow_tracker — INFO — All models logged to MLflow — Best: LightGBM
+2026-08-09 12:07:03 — __main__ — INFO — Best model saved to ./ml/model.pkl
+2026-08-09 12:12:02 — __main__ — INFO — Evaluation started
+2026-08-09 12:12:02 — __main__ — INFO — Model loaded successfully
+2026-08-09 12:12:02 — preprocess — INFO — PostgreSQL engine created successfully
+2026-08-09 12:12:02 — preprocess — INFO — Loaded 12205 rows from PostgreSQL warehouse
+2026-08-09 12:12:02 — preprocess — INFO — Starting preprocessing
+2026-08-09 12:12:02 — preprocess — INFO — Before SMOTE — Revenue 0: 10297, Revenue 1: 1908
+2026-08-09 12:12:02 — preprocess — INFO — Feature scaling complete
+2026-08-09 12:12:02 — preprocess — INFO — Selected Features: ['Administrative', 'Administrative_Duration', 'Informational', 'ProductRelated', 'ProductRelated_Duration', 'BounceRates', 'ExitRates', 'PageValues', 'SpecialDay', 'VisitorType']
+2026-08-09 12:12:03 — preprocess — INFO — After SMOTE — Revenue 0: 10297, Revenue 1: 10297
+2026-08-09 12:12:03 — preprocess — INFO — Scaler saved to ./ml/scaler.pkl
+2026-08-09 12:12:03 — preprocess — INFO — Selector saved to ./ml/selector.pkl
+2026-08-09 12:12:03 — preprocess — INFO — Selected features saved to ./ml/selected_features.pkl
+2026-08-09 12:12:03 — preprocess — INFO — Preprocessing complete — final shape: (20594, 10)
+2026-08-09 12:12:04 — __main__ — INFO — Accuracy  : 0.9223
+2026-08-09 12:12:04 — __main__ — INFO — Precision : 0.9155
+2026-08-09 12:12:04 — __main__ — INFO — Recall    : 0.9322
+2026-08-09 12:12:04 — __main__ — INFO — F1 Score  : 0.9238
+2026-08-09 12:12:04 — __main__ — INFO — ROC AUC   : 0.9778
+2026-08-09 12:12:04 — __main__ — INFO — Confusion Matrix:
+[[1859  179]
+ [ 141 1940]]
+2026-08-09 12:12:34 — __main__ — INFO — Model loaded successfully
+2026-08-09 12:12:34 — __main__ — INFO — Scaler loaded successfully
+2026-08-09 12:12:34 — __main__ — INFO — Selector loaded successfully
+2026-08-09 12:12:34 — __main__ — INFO — Selected features loaded successfully
+2026-08-09 12:12:34 — __main__ — INFO — Input data scaled successfully
+2026-08-09 12:12:34 — __main__ — INFO — Feature selection applied successfully
+2026-08-09 12:12:35 — __main__ — INFO — Prediction: Will Not Purchase — Probability: 0.0052
+2026-08-09 12:17:20 — __main__ — INFO — Evaluation started
+2026-08-09 12:17:20 — __main__ — INFO — Model loaded successfully
+2026-08-09 12:17:21 — preprocess — INFO — PostgreSQL engine created successfully
+2026-08-09 12:17:21 — preprocess — INFO — Loaded 12205 rows from PostgreSQL warehouse
+2026-08-09 12:17:21 — preprocess — INFO — Starting preprocessing
+2026-08-09 12:17:21 — preprocess — INFO — Before SMOTE — Revenue 0: 10297, Revenue 1: 1908
+2026-08-09 12:17:21 — preprocess — INFO — Feature scaling complete
+2026-08-09 12:17:21 — preprocess — INFO — Selected Features: ['Administrative', 'Administrative_Duration', 'Informational', 'ProductRelated', 'ProductRelated_Duration', 'BounceRates', 'ExitRates', 'PageValues', 'SpecialDay', 'VisitorType']
+2026-08-09 12:17:21 — preprocess — INFO — After SMOTE — Revenue 0: 10297, Revenue 1: 10297
+2026-08-09 12:17:21 — preprocess — INFO — Scaler saved to ./ml/scaler.pkl
+2026-08-09 12:17:21 — preprocess — INFO — Selector saved to ./ml/selector.pkl
+2026-08-09 12:17:21 — preprocess — INFO — Selected features saved to ./ml/selected_features.pkl
+2026-08-09 12:17:21 — preprocess — INFO — Preprocessing complete — final shape: (20594, 10)
+2026-08-09 12:17:23 — __main__ — INFO — Accuracy  : 0.9223
+2026-08-09 12:17:23 — __main__ — INFO — Precision : 0.9155
+2026-08-09 12:17:23 — __main__ — INFO — Recall    : 0.9322
+2026-08-09 12:17:23 — __main__ — INFO — F1 Score  : 0.9238
+2026-08-09 12:17:23 — __main__ — INFO — ROC AUC   : 0.9778
+2026-08-09 12:17:23 — __main__ — INFO — Confusion Matrix:
+[[1859  179]
+ [ 141 1940]]
+2026-08-09 12:29:30 — __main__ — INFO — Drift report generation started
+2026-08-09 12:29:30 — __main__ — INFO — PostgreSQL engine created successfully
+2026-08-09 12:29:30 — __main__ — INFO — Loaded 12205 rows from PostgreSQL warehouse
+2026-08-09 12:29:30 — __main__ — INFO — Reference size: 8543 rows
+2026-08-09 12:29:30 — __main__ — INFO — Current size: 3662 rows
+2026-08-09 12:29:39 — __main__ — INFO — Drift report saved to ./monitoring/drift_report.html
+2026-08-09 12:31:29 — api.main — INFO — Frontend requested
+2026-08-09 12:31:29 — api.main — INFO — Health check requested
+2026-08-09 12:31:29 — api.main — INFO — Prediction requested
+2026-08-09 12:31:31 — ml.predict — INFO — Model loaded successfully
+2026-08-09 12:31:31 — ml.predict — INFO — Scaler loaded successfully
+2026-08-09 12:31:32 — ml.predict — INFO — Selector loaded successfully
+2026-08-09 12:31:32 — ml.predict — INFO — Selected features loaded successfully
+2026-08-09 12:31:32 — ml.predict — INFO — Input data scaled successfully
+2026-08-09 12:31:32 — ml.predict — INFO — Feature selection applied successfully
+2026-08-09 12:31:33 — ml.predict — INFO — Prediction: Will Not Purchase — Probability: 0.0052
+2026-08-09 12:31:33 — api.main — INFO — Prediction result: Will Not Purchase
+2026-08-09 12:31:33 — api.main — INFO — Prediction requested
+2026-08-09 12:31:33 — ml.predict — INFO — Model loaded successfully
+2026-08-09 12:31:33 — ml.predict — INFO — Scaler loaded successfully
+2026-08-09 12:31:33 — ml.predict — INFO — Selector loaded successfully
+2026-08-09 12:31:33 — ml.predict — INFO — Selected features loaded successfully
+2026-08-09 12:31:33 — ml.predict — INFO — Input data scaled successfully
+2026-08-09 12:31:33 — ml.predict — INFO — Feature selection applied successfully
+2026-08-09 12:31:33 — ml.predict — INFO — Prediction: Will Not Purchase — Probability: 0.3925
+2026-08-09 12:31:33 — api.main — INFO — Prediction result: Will Not Purchase
+2026-08-09 12:33:01 — api.main — INFO — Frontend requested
+2026-08-09 12:33:11 — api.main — INFO — Prediction requested
+2026-08-09 12:33:13 — ml.predict — INFO — Model loaded successfully
+2026-08-09 12:33:13 — ml.predict — INFO — Scaler loaded successfully
+2026-08-09 12:33:13 — ml.predict — INFO — Selector loaded successfully
+2026-08-09 12:33:13 — ml.predict — INFO — Selected features loaded successfully
+2026-08-09 12:33:13 — ml.predict — INFO — Input data scaled successfully
+2026-08-09 12:33:13 — ml.predict — INFO — Feature selection applied successfully
+2026-08-09 12:33:15 — ml.predict — INFO — Prediction: Will Not Purchase — Probability: 0.3925
+2026-08-09 12:33:15 — api.main — INFO — Prediction result: Will Not Purchase
+2026-08-09 12:36:05 — __main__ — INFO — Drift report generation started
+2026-08-09 12:36:05 — __main__ — INFO — PostgreSQL engine created successfully
+2026-08-09 12:36:05 — __main__ — INFO — Loaded 12205 rows from PostgreSQL warehouse
+2026-08-09 12:36:05 — __main__ — INFO — Reference size: 8543 rows
+2026-08-09 12:36:05 — __main__ — INFO — Current size: 3662 rows
+2026-08-09 12:36:09 — __main__ — INFO — Drift report saved to ./monitoring/drift_report.html
+2026-08-09 12:36:27 — api.main — INFO — Frontend requested
+2026-08-09 12:36:27 — api.main — INFO — Health check requested
+2026-08-09 12:36:27 — api.main — INFO — Prediction requested
+2026-08-09 12:36:29 — ml.predict — INFO — Model loaded successfully
+2026-08-09 12:36:29 — ml.predict — INFO — Scaler loaded successfully
+2026-08-09 12:36:29 — ml.predict — INFO — Selector loaded successfully
+2026-08-09 12:36:29 — ml.predict — INFO — Selected features loaded successfully
+2026-08-09 12:36:29 — ml.predict — INFO — Input data scaled successfully
+2026-08-09 12:36:29 — ml.predict — INFO — Feature selection applied successfully
+2026-08-09 12:36:31 — ml.predict — INFO — Prediction: Will Not Purchase — Probability: 0.0052
+2026-08-09 12:36:31 — api.main — INFO — Prediction result: Will Not Purchase
+2026-08-09 12:36:31 — api.main — INFO — Prediction requested
+2026-08-09 12:36:31 — ml.predict — INFO — Model loaded successfully
+2026-08-09 12:36:31 — ml.predict — INFO — Scaler loaded successfully
+2026-08-09 12:36:31 — ml.predict — INFO — Selector loaded successfully
+2026-08-09 12:36:31 — ml.predict — INFO — Selected features loaded successfully
+2026-08-09 12:36:31 — ml.predict — INFO — Input data scaled successfully
+2026-08-09 12:36:31 — ml.predict — INFO — Feature selection applied successfully
+2026-08-09 12:36:31 — ml.predict — INFO — Prediction: Will Not Purchase — Probability: 0.3925
+2026-08-09 12:36:31 — api.main — INFO — Prediction result: Will Not Purchase
+2026-08-09 14:28:40 — api.main — INFO — Frontend requested
+2026-08-09 14:29:29 — api.main — INFO — Prediction requested
+2026-08-09 14:29:33 — ml.predict — INFO — Model loaded successfully
+2026-08-09 14:29:33 — ml.predict — INFO — Scaler loaded successfully
+2026-08-09 14:29:34 — ml.predict — INFO — Selector loaded successfully
+2026-08-09 14:29:34 — ml.predict — INFO — Selected features loaded successfully
+2026-08-09 14:29:34 — ml.predict — INFO — Input data scaled successfully
+2026-08-09 14:29:34 — ml.predict — INFO — Feature selection applied successfully
+2026-08-09 14:29:37 — ml.predict — INFO — Prediction: Will Not Purchase — Probability: 0.2883
+2026-08-09 14:29:37 — api.main — INFO — Prediction result: Will Not Purchase
+2026-08-09 14:52:32 — api.main — INFO — Frontend requested
+2026-08-09 14:54:22 — api.main — INFO — Prediction requested
+2026-08-09 14:54:36 — ml.predict — INFO — Model loaded successfully
+2026-08-09 14:54:36 — ml.predict — INFO — Scaler loaded successfully
+2026-08-09 14:54:37 — ml.predict — INFO — Selector loaded successfully
+2026-08-09 14:54:37 — ml.predict — INFO — Selected features loaded successfully
+2026-08-09 14:54:37 — ml.predict — INFO — Input data scaled successfully
+2026-08-09 14:54:37 — ml.predict — INFO — Feature selection applied successfully
+2026-08-09 14:54:41 — ml.predict — INFO — Prediction: Will Not Purchase — Probability: 0.1841
+2026-08-09 14:54:41 — api.main — INFO — Prediction result: Will Not Purchase
+2026-08-09 15:15:32 — api.main — INFO — Frontend requested
+2026-08-09 15:15:32 — api.main — INFO — Health check requested
+2026-08-09 15:15:32 — api.main — INFO — Prediction requested
+2026-08-09 15:15:35 — ml.predict — INFO — Model loaded successfully
+2026-08-09 15:15:35 — ml.predict — INFO — Scaler loaded successfully
+2026-08-09 15:15:35 — ml.predict — INFO — Selector loaded successfully
+2026-08-09 15:15:35 — ml.predict — INFO — Selected features loaded successfully
+2026-08-09 15:15:35 — ml.predict — INFO — Input data scaled successfully
+2026-08-09 15:15:35 — ml.predict — INFO — Feature selection applied successfully
+2026-08-09 15:15:39 — ml.predict — INFO — Prediction: Will Not Purchase — Probability: 0.0052
+2026-08-09 15:15:39 — api.main — INFO — Prediction result: Will Not Purchase
+2026-08-09 15:15:39 — api.main — INFO — Prediction requested
+2026-08-09 15:15:39 — ml.predict — INFO — Model loaded successfully
+2026-08-09 15:15:39 — ml.predict — INFO — Scaler loaded successfully
+2026-08-09 15:15:39 — ml.predict — INFO — Selector loaded successfully
+2026-08-09 15:15:39 — ml.predict — INFO — Selected features loaded successfully
+2026-08-09 15:15:39 — ml.predict — INFO — Input data scaled successfully
+2026-08-09 15:15:39 — ml.predict — INFO — Feature selection applied successfully
+2026-08-09 15:15:39 — ml.predict — INFO — Prediction: Will Not Purchase — Probability: 0.3925
+2026-08-09 15:15:39 — api.main — INFO — Prediction result: Will Not Purchase
+2026-08-09 15:16:18 — __main__ — INFO — Drift report generation started
+2026-08-09 15:16:19 — __main__ — INFO — PostgreSQL engine created successfully
+2026-08-09 15:16:20 — __main__ — INFO — Loaded 12205 rows from PostgreSQL warehouse
+2026-08-09 15:16:20 — __main__ — INFO — Reference size: 8543 rows
+2026-08-09 15:16:20 — __main__ — INFO — Current size: 3662 rows
+2026-08-09 15:16:33 — __main__ — INFO — Drift report saved to ./monitoring/drift_report.html
+2026-08-09 15:16:54 — scheduler.retrain_job — INFO — Full pipeline started
+2026-08-09 15:16:54 — scheduler.retrain_job — INFO — ETL pipeline started
+2026-08-09 15:16:55 — etl.extract — INFO — MySQL engine created successfully
+2026-08-09 15:16:56 — etl.extract — INFO — Extracted 12330 rows from MySQL
+2026-08-09 15:16:56 — etl.transform — INFO — Starting data transformation
+2026-08-09 15:16:56 — etl.transform — INFO — Column validation passed
+2026-08-09 15:16:56 — etl.transform — INFO — Null value validation passed
+2026-08-09 15:16:56 — etl.transform — INFO — Value range validation passed
+2026-08-09 15:16:56 — etl.transform — INFO — Revenue column validation passed
+2026-08-09 15:16:56 — etl.transform — INFO — Row count validation passed — 12330 rows
+2026-08-09 15:16:56 — etl.transform — INFO — Dropped 125 duplicate rows
+2026-08-09 15:16:56 — etl.transform — INFO — Dropped 0 null rows
+2026-08-09 15:16:56 — etl.transform — INFO — Month column encoded
+2026-08-09 15:16:56 — etl.transform — INFO — VisitorType column encoded
+2026-08-09 15:16:56 — etl.transform — INFO — Transformation complete — final shape: (12205, 18)
+2026-08-09 15:16:56 — etl.load — INFO — PostgreSQL engine created successfully
+2026-08-09 15:16:58 — etl.load — INFO — Loaded 12205 rows into PostgreSQL warehouse
+2026-08-09 15:16:58 — scheduler.retrain_job — INFO — ETL pipeline completed
+2026-08-09 15:16:58 — scheduler.retrain_job — INFO — Training pipeline started
+2026-08-09 15:16:58 — ml.train — INFO — Training pipeline started
+2026-08-09 15:16:58 — preprocess — INFO — PostgreSQL engine created successfully
+2026-08-09 15:16:59 — preprocess — INFO — Loaded 12205 rows from PostgreSQL warehouse
+2026-08-09 15:16:59 — preprocess — INFO — Starting preprocessing
+2026-08-09 15:16:59 — preprocess — INFO — Before SMOTE — Revenue 0: 10297, Revenue 1: 1908
+2026-08-09 15:16:59 — preprocess — INFO — Feature scaling complete
+2026-08-09 15:16:59 — preprocess — INFO — Selected Features: ['Administrative', 'Administrative_Duration', 'Informational', 'ProductRelated', 'ProductRelated_Duration', 'BounceRates', 'ExitRates', 'PageValues', 'SpecialDay', 'VisitorType']
+2026-08-09 15:16:59 — preprocess — INFO — After SMOTE — Revenue 0: 10297, Revenue 1: 10297
+2026-08-09 15:16:59 — preprocess — INFO — Scaler saved to ./ml/scaler.pkl
+2026-08-09 15:16:59 — preprocess — INFO — Selector saved to ./ml/selector.pkl
+2026-08-09 15:16:59 — preprocess — INFO — Selected features saved to ./ml/selected_features.pkl
+2026-08-09 15:16:59 — preprocess — INFO — Preprocessing complete — final shape: (20594, 10)
+2026-08-09 15:16:59 — ml.train — INFO — Train size: 16475 | Test size: 4119
+2026-08-09 15:16:59 — ml.train — INFO — Starting hyperparameter tuning for RandomForest
+2026-08-09 15:18:38 — ml.train — INFO — RandomForest best params: {'max_depth': None, 'min_samples_split': 2, 'n_estimators': 200}
+2026-08-09 15:18:38 — ml.train — INFO — RandomForest best cv score: 0.9680
+2026-08-09 15:18:39 — ml.train — INFO — RandomForest — Accuracy: 0.9175 | AUC: 0.9740
+2026-08-09 15:18:39 — ml.train — INFO — Starting hyperparameter tuning for XGBoost
+2026-08-09 15:18:44 — ml.train — INFO — XGBoost best params: {'learning_rate': 0.1, 'max_depth': 6, 'n_estimators': 200}
+2026-08-09 15:18:44 — ml.train — INFO — XGBoost best cv score: 0.9674
+2026-08-09 15:18:44 — ml.train — INFO — XGBoost — Accuracy: 0.9116 | AUC: 0.9710
+2026-08-09 15:18:44 — ml.train — INFO — Starting hyperparameter tuning for LightGBM
+2026-08-09 15:18:58 — ml.train — INFO — LightGBM best params: {'learning_rate': 0.1, 'max_depth': -1, 'n_estimators': 200}
+2026-08-09 15:18:58 — ml.train — INFO — LightGBM best cv score: 0.9736
+2026-08-09 15:18:58 — ml.train — INFO — LightGBM — Accuracy: 0.9223 | AUC: 0.9778
+2026-08-09 15:18:58 — ml.train — INFO — Best Model: LightGBM — AUC: 0.9778
+2026-08-09 15:18:58 — mlflow_tracker — INFO — MLflow initialized
+2026-08-09 15:19:27 — mlflow_tracker — INFO — MLflow run logged for RandomForest — Best: False
+2026-08-09 15:19:33 — mlflow_tracker — INFO — MLflow run logged for XGBoost — Best: False
+2026-08-09 15:19:41 — mlflow_tracker — INFO — Best model 'LightGBM' registered in MLflow Model Registry
+2026-08-09 15:19:41 — mlflow_tracker — INFO — MLflow run logged for LightGBM — Best: True
+2026-08-09 15:19:41 — mlflow_tracker — INFO — All models logged to MLflow — Best: LightGBM
+2026-08-09 15:19:41 — ml.train — INFO — Best model saved to ./ml/model.pkl
+2026-08-09 15:19:41 — scheduler.retrain_job — INFO — Training pipeline completed
+2026-08-09 15:19:41 — scheduler.retrain_job — INFO — Drift report started
+2026-08-09 15:19:41 — monitoring.drift_report — INFO — Drift report generation started
+2026-08-09 15:19:41 — monitoring.drift_report — INFO — PostgreSQL engine created successfully
+2026-08-09 15:19:41 — monitoring.drift_report — INFO — Loaded 12205 rows from PostgreSQL warehouse
+2026-08-09 15:19:41 — monitoring.drift_report — INFO — Reference size: 8543 rows
+2026-08-09 15:19:41 — monitoring.drift_report — INFO — Current size: 3662 rows
+2026-08-09 15:19:45 — monitoring.drift_report — INFO — Drift report saved to ./monitoring/drift_report.html
+2026-08-09 15:19:45 — scheduler.retrain_job — INFO — Drift report completed
+2026-08-09 15:19:45 — scheduler.retrain_job — INFO — Full pipeline completed
+2026-08-09 15:20:19 — __main__ — INFO — Drift report generation started
+2026-08-09 15:20:19 — __main__ — INFO — PostgreSQL engine created successfully
+2026-08-09 15:20:19 — __main__ — INFO — Loaded 12205 rows from PostgreSQL warehouse
+2026-08-09 15:20:19 — __main__ — INFO — Reference size: 8543 rows
+2026-08-09 15:20:19 — __main__ — INFO — Current size: 3662 rows
+2026-08-09 15:20:23 — __main__ — INFO — Drift report saved to ./monitoring/drift_report.html
