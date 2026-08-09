@@ -6,6 +6,10 @@ import pandas as pd  # data manipulation
 from dotenv import load_dotenv  # load env variables
 import os  # access env variables
 import sys  # system path manipulation
+from pathlib import Path
+import traceback
+
+
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))  # add root to path
 from utils.logger import get_logger  # import common logger
@@ -14,33 +18,65 @@ load_dotenv()  # load .env file
 
 logger = get_logger(__name__)  # get logger for this module
 
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+ML_DIR = BASE_DIR / "ml"
+
+
 def load_artifacts():
     try:
-        # load saved model from disk
-        with open(os.getenv('MODEL_PATH'), 'rb') as f:
-            model = pickle.load(f)  # deserialize model
-        logger.info("Model loaded successfully")  # log success
+        model_path = os.getenv("MODEL_PATH")
 
-        # load saved scaler from disk
-        with open('./ml/scaler.pkl', 'rb') as f:
-            scaler = pickle.load(f)  # deserialize scaler
-        logger.info("Scaler loaded successfully")  # log success
+        if not model_path:
+            model_path = str(ML_DIR / "model.pkl")
 
-        # load saved selector from disk
-        with open('./ml/selector.pkl', 'rb') as f:
-            selector = pickle.load(f)  # deserialize selector
-        logger.info("Selector loaded successfully")  # log success
+        print(f"Loading model from: {model_path}")
+        print(f"ML directory: {ML_DIR}")
 
-        # load selected feature names
-        with open('./ml/selected_features.pkl', 'rb') as f:
-            selected_features = pickle.load(f)  # deserialize feature names
-        logger.info("Selected features loaded successfully")  # log success
+        # Check whether required files exist
+        required_files = [
+            Path(model_path),
+            ML_DIR / "scaler.pkl",
+            ML_DIR / "selector.pkl",
+            ML_DIR / "selected_features.pkl"
+        ]
 
-        return model, scaler, selector, selected_features  # return all artifacts
+        for file_path in required_files:
+            print(f"Checking: {file_path}")
+
+            if not file_path.exists():
+                raise FileNotFoundError(
+                    f"Required artifact not found: {file_path}"
+                )
+
+        # Load model
+        with open(model_path, "rb") as f:
+            model = pickle.load(f)
+
+        # Load scaler
+        with open(ML_DIR / "scaler.pkl", "rb") as f:
+            scaler = pickle.load(f)
+
+        # Load selector
+        with open(ML_DIR / "selector.pkl", "rb") as f:
+            selector = pickle.load(f)
+
+        # Load selected features
+        with open(ML_DIR / "selected_features.pkl", "rb") as f:
+            selected_features = pickle.load(f)
+
+        print("All ML artifacts loaded successfully.")
+
+        return model, scaler, selector, selected_features
 
     except Exception as e:
-        logger.error(f"Failed to load artifacts: {e}")  # log error
-        raise  # re-raise exception
+        print("❌ ERROR while loading ML artifacts:")
+        print(f"Error type: {type(e).__name__}")
+        print(f"Error message: {str(e)}")
+        traceback.print_exc()
+
+        raise
+     
 
 def predict(input_data: dict):
     try:

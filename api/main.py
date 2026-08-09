@@ -68,10 +68,30 @@ def frontend(request: Request):
         logger.error(f"Frontend failed: {e}")  # log error
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/health")  # health check endpoint
+from pathlib import Path
+
+
+@app.get("/health")
 def health():
-    logger.info("Health check requested")  # log request
-    return {"status": "healthy"}  # return healthy status
+    required_files = [
+        "ml/model.pkl",
+        "ml/scaler.pkl",
+        "ml/selector.pkl",
+        "ml/selected_features.pkl"
+    ]
+
+    artifacts = {}
+
+    for file in required_files:
+        path = Path(file)
+        artifacts[file] = path.exists()
+
+    all_files_exist = all(artifacts.values())
+
+    return {
+        "status": "healthy" if all_files_exist else "unhealthy",
+        "artifacts": artifacts
+    }
 
 @app.post("/predict", response_model=PredictionOutput)  # prediction endpoint
 def predict_endpoint(data: ShopperInput):

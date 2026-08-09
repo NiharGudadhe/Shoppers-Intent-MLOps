@@ -37,7 +37,11 @@ document.getElementById('prediction-form').addEventListener('submit', async func
             body: JSON.stringify(data)  // send data as json
         });
 
-        const result = await response.json(); // parse response
+    const result = await response.json();
+
+        if (!response.ok) {
+             throw new Error(result.detail || "Prediction API failed");
+        }
 
         // display result based on prediction
         if (result.prediction === 1) {
