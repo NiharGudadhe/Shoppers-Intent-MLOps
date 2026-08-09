@@ -32,6 +32,7 @@ A production-grade end-to-end ML Classification project that predicts whether an
 
 ## Project Structure
 
+```text
 shoppers-intent-mlops/
 ├── api/
 │   ├── templates/index.html     # frontend html
