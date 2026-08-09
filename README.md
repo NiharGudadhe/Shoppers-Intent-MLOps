@@ -69,7 +69,7 @@ shoppers-intent-mlops/
 ├── Dockerfile                   # docker configuration
 ├── render.yaml                  # render deployment config
 └── requirements.txt             # python dependencies
-
+```
 
 ## Dataset
 - **Source**: Online Shoppers Purchasing Intention Dataset
