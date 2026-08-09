@@ -70,8 +70,6 @@ shoppers-intent-mlops/
 └── requirements.txt             # python dependencies
 
 
-
-
 ## Dataset
 - **Source**: Online Shoppers Purchasing Intention Dataset
 - **Rows**: 12,330
