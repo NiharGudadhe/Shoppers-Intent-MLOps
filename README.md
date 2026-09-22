@@ -73,7 +73,7 @@ shoppers-intent-mlops/
 
 ## Dataset
 - **Source**: Online Shoppers Purchasing Intention Dataset
-- **Rows**: 12,330
+- **Rows**: 122,330
 - **Target**: Revenue (Will Purchase or Not)
 - **Features**: 17 behavioral and session features
 - **Class Imbalance**: Fixed using SMOTE
